@@ -1,25 +1,41 @@
-# 📊 Análisis de comportamiento de clientes y ventas
-
-## 📌 Descripción
-Este proyecto analiza datos de clientes y ventas para identificar patrones de consumo y oportunidades de negocio.
+# 📊 Análisis de ventas por producto
 
 ## 🎯 Objetivo
-Comprender el comportamiento de los clientes y detectar tendencias que ayuden a mejorar la toma de decisiones.
+Analizar datos de ventas para identificar qué productos generan mayores ingresos y detectar patrones básicos.
 
-## ⚙️ Tecnologías
-- Python
-- Pandas
-- Matplotlib
+## 📌 Descripción
+Este proyecto utiliza Python para explorar y visualizar datos de ventas, con el fin de generar insights útiles para la toma de decisiones.
 
-## 🔍 Proceso
-- Limpieza de datos
-- Análisis exploratorio (EDA)
-- Visualización de datos
+import pandas as pd
+import matplotlib.pyplot as plt
 
-## 📈 Resultados
-- Identificación de segmentos de clientes
-- Detección de patrones de compra
-- Insights para decisiones comerciales
+data = {
+    "producto": ["A", "B", "C", "D", "E"],
+    "ventas": [100, 250, 180, 300, 220]
+}
 
-## 📫 Contacto
-LinkedIn: https://www.linkedin.com/in/óscar-alejandro-valencia-gonzalez-857255399/
+df = pd.DataFrame(data)
+
+df
+
+## 📊 Datos
+
+El dataset contiene información de ventas por producto.
+Cada fila representa un producto y su cantidad de ventas.
+
+plt.bar(df["producto"], df["ventas"])
+plt.title("Ventas por producto")
+plt.xlabel("Producto")
+plt.ylabel("Ventas")
+plt.show()
+
+## 🔍 Análisis
+
+Se observa que el producto D tiene las mayores ventas, seguido por el producto B.
+Esto indica que estos productos son los más demandados dentro del conjunto analizado.
+
+## 📈 Conclusiones
+
+- El producto D es el más vendido, lo que lo convierte en el principal generador de ingresos.
+- Existe una diferencia notable entre los productos con mayor y menor rendimiento.
+- Estos insights pueden ayudar a enfocar estrategias de venta en los productos más rentables.
